@@ -21,21 +21,20 @@ Whenever possible we tried to reuse / extend existing packages like `OAuth2 for 
 ## Basic Overview
 
 The most important packages of the library:
-<pre>
-/pkg
-    /client            clients using the OP for retrieving, exchanging and verifying tokens       
-        /rp            definition and implementation of an OIDC Relying Party (client)
-        /rs            definition and implementation of an OAuth Resource Server (API)
-    /op                definition and implementation of an OIDC OpenID Provider (server)
-    /oidc              definitions shared by clients and server
 
-/example
-    /client/api        example of an api / resource server implementation using token introspection
-    /client/app        web app / RP demonstrating authorization code flow using various authentication methods (code, PKCE, JWT profile)
-    /client/github     example of the extended OAuth2 library, providing an HTTP client with a reuse token source
-    /client/service    demonstration of JWT Profile Authorization Grant
-    /server            examples of an OpenID Provider implementations (including dynamic) with some very basic login UI
-</pre>
+- [`pkg/client`](pkg/client) - clients using the OP for retrieving, exchanging and verifying tokens
+- [`pkg/client/rp`](pkg/client/rp) - definition and implementation of an OIDC Relying Party (client)
+- [`pkg/client/rs`](pkg/client/rs) - definition and implementation of an OAuth Resource Server (API)
+- [`pkg/op`](pkg/op) - definition and implementation of an OIDC OpenID Provider (server)
+- [`pkg/oidc`](pkg/oidc) - definitions shared by clients and server
+
+Examples using those packages
+
+- [`client/api`](example/client/api) - example of an api / resource server implementation using token introspection
+- [`client/app`](example/client/app) - web app / RP demonstrating authorization code flow using various authentication methods (code, PKCE, JWT profile)
+- [`client/github`](example/client/github) - example of the extended OAuth2 library, providing an HTTP client with a reuse token source
+- [`client/service`](example/client/service) - demonstration of JWT Profile Authorization Grant
+- [`server`](example/server) - examples of an OpenID Provider implementations (including dynamic) with some very basic login UI
 
 ## How To Use It
 
